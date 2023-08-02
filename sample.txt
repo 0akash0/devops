@@ -1,2 +1,4 @@
 this is a sample file
-make a note  
+make a note
+second commit 
+  
