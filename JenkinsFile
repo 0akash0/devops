@@ -3,7 +3,7 @@ pipeline {
 
   environment {
       DOCKERHUB_USRNAME = "akashmore947"
-      APP_NAME = "sample-java-project-image"
+      APP_NAME = "sample-nodejs-project-image"
       IMAGE_TAG = "${BUILD_NUMBER}"
       IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
       REGISTRY_CREDS = 'docker-cred'
@@ -44,7 +44,7 @@ pipeline {
                     git config user.name "Akash more"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g" deployments/deployment.yml
-                    git add deploy/deployment.yml
+                    git add deployments/deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
                 '''
