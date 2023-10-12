@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: akashmore947/my-app-image:latest
+          image: akashmore947/sample-nodejs-project-image:latest
           imagePullPolicy: Always 
           ports:
             - containerPort: 8000
