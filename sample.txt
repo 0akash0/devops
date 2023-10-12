@@ -1,5 +1,0 @@
-this is a sample file
-make a note
-second commit 
-third commit
-to check git diff  
